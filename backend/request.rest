@@ -1,0 +1,54 @@
+### create user
+
+POST http://localhost:3003/signup
+Content-Type: application/json
+
+{
+    "username": "desafiosharenergy",
+    "password": "sh@r3n3rgy"
+}
+
+### login user 
+
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{
+    "username": "desafiosharenergy",
+    "password": "sh@r3n3rgy" 
+}
+
+### register client
+
+POST http://localhost:3003/clients/register
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MjQ0OTczNCwiZXhwIjoxNjcyNDUzMzM0fQ.rKlG6jpsmh9jPLrM0CMIo3IMTuu0OGxJfr_9HX6-xY0
+Content-Type: application/json
+
+{
+    "name": "Lucia",
+    "email":"lu@hotmail.com", 
+    "phone": "55-22365-9965", 
+    "address": "Rua monseñor alberti 332", 
+    "cpf": "856-9632-555.32"
+}
+
+### get client information
+
+GET http://localhost:3003/clients/63af76fe54a79363812e6a07
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MjQ0ODQ5NSwiZXhwIjoxNjcyNDUyMDk1fQ.0Ks3YPIdChefhzM7lVXI0YbHMgUBZnvEG4DnwboCJnE
+Content-Type: application/json
+
+### update client information
+
+PUT http://localhost:3003/clients/63af76fe54a79363812e6a07
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MjQ0ODQ5NSwiZXhwIjoxNjcyNDUyMDk1fQ.0Ks3YPIdChefhzM7lVXI0YbHMgUBZnvEG4DnwboCJnE
+Content-Type: application/json
+
+{
+    "phone": "(22) 9 9658-2365"
+}
+
+### delete client 
+
+DELETE  http://localhost:3003/clients/63af76fe54a79363812e6a07
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MjQ0ODQ5NSwiZXhwIjoxNjcyNDUyMDk1fQ.0Ks3YPIdChefhzM7lVXI0YbHMgUBZnvEG4DnwboCJnE

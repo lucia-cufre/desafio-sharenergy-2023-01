@@ -32,6 +32,12 @@ Content-Type: application/json
     "cpf": "856-9632-555.32"
 }
 
+### get all clients
+
+GET http://localhost:3003/clients
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MzAyMTQ1NCwiZXhwIjoxNjczMTA3ODU0fQ.j8MKo445oDD-sdebuCldN3ReKF-xEf0Ck2da7aXqFSc
+Content-Type: application/json
+
 ### get client information
 
 GET http://localhost:3003/clients/63af76fe54a79363812e6a07
@@ -40,8 +46,8 @@ Content-Type: application/json
 
 ### update client information
 
-PUT http://localhost:3003/clients/63af76fe54a79363812e6a07
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MjQ0ODQ5NSwiZXhwIjoxNjcyNDUyMDk1fQ.0Ks3YPIdChefhzM7lVXI0YbHMgUBZnvEG4DnwboCJnE
+PUT http://localhost:3003/clients/63b84770c2d1150b46cfe248
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYWY2MTI5Y2EyNWVkYjE0Y2JlZDgzYSIsImlhdCI6MTY3MzAyMTQ1NCwiZXhwIjoxNjczMTA3ODU0fQ.j8MKo445oDD-sdebuCldN3ReKF-xEf0Ck2da7aXqFSc
 Content-Type: application/json
 
 {

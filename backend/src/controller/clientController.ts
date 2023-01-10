@@ -24,6 +24,15 @@ export class ClientController {
     }
   };
 
+  public getAllClients = async (req: Request, res: Response) => {
+    try {
+      const clients = await this.clientBusiness.getAllClients();
+      res.status(200).send({ clients: clients });
+    } catch (error: any) {
+      res.status(error.statusCode || 400).send(error.message);
+    }
+  };
+
   public getClient = async (req: Request, res: Response) => {
     try {
       const { id } = req.params;

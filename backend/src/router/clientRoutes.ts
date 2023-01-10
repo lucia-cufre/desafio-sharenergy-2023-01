@@ -12,6 +12,9 @@ const clientController = new ClientController(clientBusiness);
 clientRouter.post("/register", authenticated, (req, res) =>
   clientController.registerClient(req, res)
 );
+clientRouter.get("/", authenticated, (req, res) =>
+  clientController.getAllClients(req, res)
+);
 clientRouter
   .route("/:id")
   .get(authenticated, (req, res) => clientController.getClient(req, res))

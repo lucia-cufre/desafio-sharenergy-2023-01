@@ -3,7 +3,7 @@ import * as jwt from "jsonwebtoken";
 export class TokenGenerator {
   public generateToken = (id: string) => {
     const token = jwt.sign({ id }, JWT_KEY as string, {
-      expiresIn: "1h",
+      expiresIn: "24h",
     });
     return token;
   };

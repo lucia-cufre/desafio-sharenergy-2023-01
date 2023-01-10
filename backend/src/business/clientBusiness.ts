@@ -41,6 +41,18 @@ export class ClientBusiness {
     }
   };
 
+  // @desc    Get all clients
+  // @route   GET /clients
+  public getAllClients = async () => {
+    try {
+      const clients = await Client.find();
+
+      return clients
+    } catch (error: any) {
+      throw new Error(error.message);
+    }
+  };
+
   // @desc    Get client data
   // @route   GET /clients/:id
   public getClient = async (param: string): Promise<ClientDTO> => {
@@ -71,7 +83,7 @@ export class ClientBusiness {
         throw new ClientNotFound();
       }
 
-      await Client.findByIdAndUpdate(id, input, { new: false });
+      await Client.findByIdAndUpdate(id, input, { new: true });
     } catch (error: any) {
       throw new Error(error.message);
     }
